@@ -1,0 +1,10 @@
+{
+  "env" : {
+    "public" : {
+      "db" : "http://samed:jamed@localhost:5984/backbone"
+    },
+    "default" : {
+      "db" : "http://samed:jamed@localhost:5984/backbone"
+    }
+  }
+}
