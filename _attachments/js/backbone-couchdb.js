@@ -15,8 +15,8 @@ backbone-couchdb.js is licensed under the MIT license.
 
   Backbone.couch_connector = con = {
     config: {
-      db_name: "backbone",
-      ddoc_name: "tangtest",
+      db_name: "backbone_connect",
+      ddoc_name: "backbone_example",
       view_name: "byCollection",
       list_name: null,
       global_changes: false,
