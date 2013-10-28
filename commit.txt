@@ -1,0 +1,3 @@
+"+) Added Config Files For Backbone And jQueryCouch" 
+"+> Moved Results coffee to Result Folder" 
++) Added _docs files 
