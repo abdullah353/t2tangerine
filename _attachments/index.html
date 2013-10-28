@@ -13,20 +13,18 @@
   </body>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery.couch.js"></script>
-
   <script type="text/javascript" src="js/underscore.js"></script>
   <script type="text/javascript" src="js/backbone.js"></script>
   <script type="text/javascript" src="js/backbone-couchdb.js"></script>
   
 
-<script type="text/javascript">
-Backbone.couch_connector.config.db_name = "backbone";
-Backbone.couch_connector.config.ddoc_name = "tangerinesam";
-Backbone.couch_connector.config.global_changes = true;
-_.templateSettings = {
-  interpolate : /\{\{(.+?)\}\}/g
-};
-</script>
-  <script src="js/lib/Result.js"></script>
-  <script src="js/lib/Results.js"></script>
+
+  <script src="js/lib/config.js"></script>
+  <script src="js/lib/Result/Result.js"></script>
+  <script src="js/lib/Result/Results.js"></script>
+  <script src="js/lib/Question/Question.js"></script>
+  <script src="js/lib/Question/Questions.js"></script>
+  <script src="js/lib/Assessment/Assessment.js"></script>
+  <script src="js/lib/Assessment/Assessments.js"></script>
+  <script src="js/lib/Assessment/AssessmentView.js"></script>
 </html>
