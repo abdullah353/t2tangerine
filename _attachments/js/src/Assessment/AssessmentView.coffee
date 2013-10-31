@@ -1,6 +1,9 @@
 @AssessmentView = Backbone.View.extend
-	model: Assessment
+	tagName: 'table',
+	template: null,
 	initialize: () ->
-		@render()
+		@template =  _.template("<% print('Hello ' + epithet); %>")
 	render: () ->
 		console.log "Rendering AssessmentView"
+		@$el.html( @template({epithet: "stooge"}) )
+		@ 

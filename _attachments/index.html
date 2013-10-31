@@ -4,18 +4,25 @@
     <title>My New CouchApp</title>
   </head>
   <body>
-   <div id="body"></div>
-   <a href="#add">Add List</a>	
-<a href="#close">close List</a>
-<ul>
-
-</ul>
+  <div class="wrapper">sd</div>
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="entry">
+  <h1>{{title}}</h1>
+  <div class="body">
+    {{body}}
+  </div>
+</div>
+</script>
   </body>
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery.couch.js"></script>
-  <script type="text/javascript" src="js/underscore.js"></script>
-  <script type="text/javascript" src="js/backbone.js"></script>
-  <script type="text/javascript" src="js/backbone-couchdb.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore-min.js"></script>
+  <script src="js/backbone-min.js"></script>
+
+  <script src="js/jquery.couch.js"></script>
+  <script src="js/backbone-couchdb.js"></script>
+
+  <script src="js/handlebars.js"></script>
+
   
 
 
@@ -27,4 +34,21 @@
   <script src="js/lib/Assessment/Assessment.js"></script>
   <script src="js/lib/Assessment/Assessments.js"></script>
   <script src="js/lib/Assessment/AssessmentView.js"></script>
+
+  <script type="text/javascript">
+/*var a = new Assessment();
+var b = new Assessments();
+b.fetch();
+console.log(JSON.stringify(b));
+var c = new AssessmentView();
+$('.wrapper').html( c.render().$el.attr('id', 'movies') );
+*/
+  </script>
+  <script type="text/javascript">
+var source   = $("#entry-template").html();
+var template = Handlebars.compile(source);
+var context = {title: "My New Post", body: "This is my first post!"}
+var html    = template(context);
+$('.wrapper').html(html);
+  </script>
 </html>
