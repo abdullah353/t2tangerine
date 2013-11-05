@@ -2,8 +2,8 @@
 	tagName: 'table',
 	template: null,
 	initialize: () ->
-		@template =  _.template("<% print('Hello ' + epithet); %>")
+		@template =  Handlebars.compile($("#entry-template").html())
 	render: () ->
 		console.log "Rendering AssessmentView"
-		@$el.html( @template({epithet: "stooge"}) )
+		@$el.html( @template(this.collection.toJSON()) )
 		@ 

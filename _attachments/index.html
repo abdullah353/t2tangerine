@@ -6,12 +6,12 @@
   <body>
   <div class="wrapper">sd</div>
 <script id="entry-template" type="text/x-handlebars-template">
-  <div class="entry">
-  <h1>{{title}}</h1>
-  <div class="body">
-    {{body}}
-  </div>
-</div>
+<div>
+      {{#each []}}
+        {{this.name}}
+        <br/>
+      {{/each}}
+    <div>
 </script>
   </body>
   <script src="js/jquery.js"></script>
@@ -36,19 +36,19 @@
   <script src="js/lib/Assessment/AssessmentView.js"></script>
 
   <script type="text/javascript">
-/*var a = new Assessment();
+var a = new Assessment();
 var b = new Assessments();
 b.fetch();
 console.log(JSON.stringify(b));
-var c = new AssessmentView();
+var c = new AssessmentView({collection: b});
 $('.wrapper').html( c.render().$el.attr('id', 'movies') );
-*/
+
   </script>
   <script type="text/javascript">
-var source   = $("#entry-template").html();
+/*var source   = $("#entry-template").html();
 var template = Handlebars.compile(source);
 var context = {title: "My New Post", body: "This is my first post!"}
 var html    = template(context);
-$('.wrapper').html(html);
+$('.wrapper').html(html);*/
   </script>
 </html>

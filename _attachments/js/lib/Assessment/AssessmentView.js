@@ -4,13 +4,11 @@
     tagName: 'table',
     template: null,
     initialize: function() {
-      return this.template = _.template("<% print('Hello ' + epithet); %>");
+      return this.template = Handlebars.compile($("#entry-template").html());
     },
     render: function() {
       console.log("Rendering AssessmentView");
-      this.$el.html(this.template({
-        epithet: "stooge"
-      }));
+      this.$el.html(this.template(this.collection.toJSON()));
       return this;
     }
   });
